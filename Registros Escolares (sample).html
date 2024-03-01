@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Notas Escolares</title>
+  <!-- Incluindo o Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Incluindo o Bulma CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css">
+</head>
+<body>
+
+  <div class="container mt-4">
+    <h1 class="title">Registro de Notas Escolares</h1>
+    <form id="registro-notas-form">
+      <div class="form-group">
+        <label for="nome-aluno">Nome do Aluno</label>
+        <input type="text" class="form-control" id="nome-aluno" placeholder="Digite o nome do aluno">
+      </div>
+      <div class="form-group">
+        <label for="nota-aluno">Nota do Aluno</label>
+        <input type="number" class="form-control" id="nota-aluno" placeholder="Digite a nota do aluno">
+      </div>
+      <button type="submit" class="btn btn-primary">Registrar Nota</button>
+    </form>
+    <div class="mt-4" id="registros-notas">
+      <!-- Aqui serão exibidos os registros de notas -->
+    </div>
+  </div>
+
+  <!-- Incluindo o Bootstrap JS e jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Função para lidar com o envio do formulário
+    $(document).ready(function(){
+      $('#registro-notas-form').submit(function(e){
+        e.preventDefault(); // Impede o envio do formulário
+        var nomeAluno = $('#nome-aluno').val();
+        var notaAluno = $('#nota-aluno').val();
+        $('#registros-notas').append('<div class="card"><div class="card-content"><p><strong>Nome:</strong> ' + nomeAluno + ' - <strong>Nota:</strong> ' + notaAluno + '</p></div></div>');
+        // Limpar os campos do formulário após o registro
+        $('#nome-aluno').val('');
+        $('#nota-aluno').val('');
+      });
+    });
+  </script>
+</body>
+</html>
