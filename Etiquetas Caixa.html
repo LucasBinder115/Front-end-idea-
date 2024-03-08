@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Produtor Rural</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #login-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid #007bff;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        #login-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #login-form input[type="text"],
+        #login-form input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        #login-form input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        #login-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #login-form img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-form">
+        <img src="sua_imagem.jpg" alt="Logo da Empresa">
+        <h2>Login do Produtor Rural</h2>
+        <form id="form-login">
+            <input type="text" id="username" placeholder="Nome de usuário" required><br>
+            <input type="password" id="password" placeholder="Senha" required><br>
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('form-login').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            // Obter os valores dos campos
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Verificar se os campos não estão vazios
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            // Simular a autenticação (substituir isso com sua lógica de autenticação real)
+            if (username === 'usuario' && password === 'senha') {
+                alert('Login bem-sucedido! Redirecionando...');
+                // Redirecionar para a página de perfil do produtor rural
+                window.location.href = 'perfil_produtor.html';
+            } else {
+                alert('Nome de usuário ou senha incorretos. Por favor, tente novamente.');
+            }
+        });
+    </script>
+</body>
+</html>
