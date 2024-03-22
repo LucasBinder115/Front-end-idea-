@@ -1,95 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login do Produtor Rural</title>
+    <title>Lucas Fragoso Binder</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #fff;
+            color: #000;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
-        #login-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            border: 2px solid #007bff;
-            max-width: 400px;
-            width: 100%;
+
+        header {
+            background-color: #f8de7e;
+            padding: 20px 0;
             text-align: center;
+            color: #000;
         }
-        #login-form h2 {
-            margin-bottom: 20px;
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #654321;
             text-align: center;
+            padding: 10px 0;
         }
-        #login-form input[type="text"],
-        #login-form input[type="password"] {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 3px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        #login-form input[type="submit"] {
-            width: 100%;
-            background-color: #007bff;
+
+        nav a {
             color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 3px;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
         }
-        #login-form input[type="submit"]:hover {
-            background-color: #0056b3;
+
+        nav a:hover {
+            text-decoration: underline;
         }
-        #login-form img {
-            max-width: 200px;
-            margin-bottom: 20px;
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
+
 <body>
-    <div id="login-form">
-        <img src="sua_imagem.jpg" alt="Logo da Empresa">
-        <h2>Login do Produtor Rural</h2>
-        <form id="form-login">
-            <input type="text" id="username" placeholder="Nome de usuário" required><br>
-            <input type="password" id="password" placeholder="Senha" required><br>
-            <input type="submit" value="Entrar">
-        </form>
-    </div>
-
-    <script>
-        document.getElementById('form-login').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita o envio padrão do formulário
-
-            // Obter os valores dos campos
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            // Verificar se os campos não estão vazios
-            if (username.trim() === '' || password.trim() === '') {
-                alert('Por favor, preencha todos os campos.');
-                return;
-            }
-
-            // Simular a autenticação (substituir isso com sua lógica de autenticação real)
-            if (username === 'usuario' && password === 'senha') {
-                alert('Login bem-sucedido! Redirecionando...');
-                // Redirecionar para a página de perfil do produtor rural
-                window.location.href = 'perfil_produtor.html';
-            } else {
-                alert('Nome de usuário ou senha incorretos. Por favor, tente novamente.');
-            }
-        });
-    </script>
+    <header>
+        <h1>Lucas Fragoso Binder</h1>
+    </header>
+    <nav>
+        <a href="#games">Games</a>
+        <a href="#writing">Writing</a>
+        <a href="#music">Music</a>
+    </nav>
+    <section id="games">
+        <h2>Games</h2>
+        <p>Welcome to my world of games! Whether it's video games, board games, or card games, I'm passionate about all things gaming. From retro classics to the latest releases, I enjoy exploring virtual worlds and competing with friends.</p>
+    </section>
+    <section id="writing">
+        <h2>Writing</h2>
+        <p>Writing is my creative outlet. Whether it's crafting short stories, delving into poetry, or even jotting down ideas for a novel, I find joy in the written word. Through writing, I can express my thoughts, feelings, and imagination.</p>
+    </section>
+    <section id="music">
+        <h2>Music</h2>
+        <p>Music is the soundtrack to my life. Whether I'm playing an instrument, singing along to my favorite songs, or discovering new artists, music has the power to inspire, uplift, and connect us all. Let's groove to the rhythm of life together!</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Lucas Fragoso Binder. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
